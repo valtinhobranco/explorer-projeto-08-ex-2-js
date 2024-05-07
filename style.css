@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-base-white: #ffffff;
+  --color-base-purple-200: #ab8ed7;
+  --color-base-gray-900: #1a1a1e;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-base-purple-200);
+  color: var(--color-base-white);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+.page section {
+  padding:2rem;
+  background: var(--color-base-gray-900);
+  --startY: 100%;
+  animation: move 0.4s;
+  font-size: 2rem;
+  border-radius: 20px;
+  height: 41.6rem;
+  width: min(83.2rem, 90vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.page section ul {
+  padding: 3rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .page section {
+    font-size: 3rem;
+  }
+  .page section ul {
+    gap: 2rem;
+    font-size: 2rem;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+    opacity: 0;
+  }
+}
